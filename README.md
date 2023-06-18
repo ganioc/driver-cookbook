@@ -16,3 +16,20 @@ $ qemu-aarch64-static  -L /usr/aarch64-linux-gnu/ ./helloworld
 
 ```
 
+### Adding Debian files,
+使用debootstrap,
+
+```
+sudo debootstrap  \
+    --arch=arm64  \
+    --include="sudo,file,openssh-server"  \
+    --exclude="debfoster"  \
+    stretch ./debian-stretch-arm64  \
+    http://deb/debian.org/debian
+
+```
+
+## chap 2 , A peek inside the kernel
+
+
+
