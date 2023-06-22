@@ -31,5 +31,9 @@ sudo debootstrap  \
 
 ## chap 2 , A peek inside the kernel
 
+```
 
+ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- make Image dtbs modules
+
+```
 
