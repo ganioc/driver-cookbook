@@ -35,5 +35,12 @@ sudo debootstrap  \
 
 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- make Image dtbs modules
 
+KERNEL_DIR=/home/yango/project/rk3568/firefly/rk356x_linux_release_v1.3.0b/rk356x_linux_release/kernel  make
+
+sudo insmod module_par
+sudo rmmod
+sudo ls /sys/module/module_par/parameters/
+ 
 ```
 
+## chap 3 a Char Drivers,
