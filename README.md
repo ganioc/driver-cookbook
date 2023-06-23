@@ -46,3 +46,15 @@ sudo ls /sys/module/module_par/parameters/
 ## chap 3 a Char Drivers,
 推荐书籍: <gnulinux-rapid-embedded-programming>
 
+```shell
+# 查看设备, /proc/devices文件可以看到设备的major number, 
+# 有了驱动之后，还需要生成设备文件,
+mknod chrdev c 237 0
+
+dd if=/dev/zero bs=100 count=3 of=chrdev
+cat chrdev | tr '\000' '0'
+
+```
+
+## chap 4 Device Tree,
+
