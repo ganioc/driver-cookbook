@@ -57,4 +57,27 @@ cat chrdev | tr '\000' '0'
 ```
 
 ## chap 4 Device Tree,
+所有的驱动都从dts来获得配置数据, DTS, Device Tree Source, DTB, Device Tree Binary,
+
+```
+dtc -v, 1.6.1
+
+uboot, firefly-rk3568
+RK_KERNEL_DEFCONFIG=firefly_linux_defconfig
+RK_KERNEL_DEFCONFIG_FRAGMENT=rk356x_linux.config
+RK_KERNEL_DTS=rk3568-firefly-roc-pc
+RK_KERNEL_FIT_ITS=bootramdisk.its
+DTC     arch/arm64/boot/dts/rockchip/rk3568-firefly-roc-pc.dtb
+kernel/arch/arm64/boot/dts/rockchip/rk3568-firefly-roc-pc.dts
+
+
+```
+
+演示驱动如何读取DTS的信息,
+```
+
+
+```
+
+
 
