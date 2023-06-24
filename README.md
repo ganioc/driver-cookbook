@@ -115,9 +115,18 @@ request_firmware(), 驱动发起请求时，kernel开始在以下位置寻找
 ### 配置Pin脚,
 
 
-```
+```shell
+# 查看uart的pin脚配置,
+cat /sys/kernel/debug/pinctrl/
+kernel/drivers/gpio/gpio-firefly.c,
+2种gpio:
+firefly-gpio,
+firefly-irq-gpio,
+ls 
 
 
 ```
+
+## chap 5 中断和concurrency,
 
 
