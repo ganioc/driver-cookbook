@@ -54,6 +54,7 @@ mknod chrdev c 237 0
 dd if=/dev/zero bs=100 count=3 of=chrdev
 cat chrdev | tr '\000' '0'
 
+
 ```
 
 ## chap 4 Device Tree,
@@ -74,7 +75,17 @@ kernel/arch/arm64/boot/dts/rockchip/rk3568-firefly-roc-pc.dts
 ```
 
 演示驱动如何读取DTS的信息,
-```
+```shell
+return -EINVALID, 直接unload the module and return, 
+sudo insmod get_dt_data.ko path=/cpus
+
+# 接下来驱动使用DTS的信息来进行初始化,
+probe,
+
+platform driver, 
+
+修改dts, 重新下载firefly img,
+测试driver代码, 
 
 
 ```
