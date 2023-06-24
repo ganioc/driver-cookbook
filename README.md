@@ -86,9 +86,38 @@ platform driver,
 
 修改dts, 重新下载firefly img,
 测试driver代码, 
+首先安装chrdev.ko, 然后安装chrdev-req.ko, 否则会找不到, chrdev_device__register, chrdev_device_unregister,
+ls -l /sys/devices/platform/chrdev/chrdev/
+可以看见, cdev-eeprom@2, cdev-rom@4,
+driver,?
+of_node, ?
+# 观察udev事件,
+udevadm monitor -k -p -s chrdev
+/dev/cdev-eeprom@2, /dev/cdev-rom@4,
 
 
 ```
 
+如何给驱动下载软件呢？
+
+```shell
+request_firmware(), 驱动发起请求时，kernel开始在以下位置寻找
+# boot image file, location,
+# kernel command line, firmware_class.path="<path>",
+# /lib/firmware/updates/<UTS_RELEASE>, kernel-release, uname -r
+# /lib/firmware/updates/
+# /lib/firmware/
+# Generic Driver Options, Firmware loader entries,
+
+# 实验读取firmware.bin给驱动，防止污染GPL环境
+```
+
+### 配置Pin脚,
+
+
+```
+
+
+```
 
 
