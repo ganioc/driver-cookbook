@@ -129,4 +129,9 @@ ls
 
 ## chap 5 中断和concurrency,
 
+查看最简单的代码, kernel/drivers/misc/dummy-irq.c
 
+```
+/proc/interrupts, 
+
+```
