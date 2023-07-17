@@ -135,3 +135,14 @@ ls
 /proc/interrupts, 
 
 ```
+
+# udev project
+
+```shell
+sudo apt install libudev-dev
+
+gcc -Wall -g -o udev_example udev.c -ludev
+
+# /sys/class/tty/
+ttyUSB0 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-9/1-9:1.0/ttyUSB0/tty/ttyUSB0
+```
