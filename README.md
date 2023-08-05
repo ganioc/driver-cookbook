@@ -136,6 +136,20 @@ ls
 
 ```
 
+## chap 7 Advanced char dev
+
+```shell
+chrdev_test.c, # To do some test with the driver module, kernel module
+
+sudo ./chrdev_ioctl /dev/cdev-eeprom@2
+
+
+```
+
+mmap, accessing I/O memory,
+
+
+
 # udev project
 
 ```shell
@@ -146,3 +160,4 @@ gcc -Wall -g -o udev_example udev.c -ludev
 # /sys/class/tty/
 ttyUSB0 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-9/1-9:1.0/ttyUSB0/tty/ttyUSB0
 ```
+
